@@ -240,5 +240,6 @@ public/
 # Custom
 *.ini
 python
+.git/
 
 # End of https://www.gitignore.io/api/node
