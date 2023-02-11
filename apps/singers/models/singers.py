@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from configs.databases import Base
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
+
+from configs.databases import Base
 
 
 class Singer(Base):

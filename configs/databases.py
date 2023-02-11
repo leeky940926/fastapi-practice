@@ -18,14 +18,14 @@ POSTGRES_INDEXES_NAMING_CONVENTION = {
     "pk": "%(table_name)s_pkey",
 }
 metadata = MetaData(naming_convention=POSTGRES_INDEXES_NAMING_CONVENTION)
-Base = declarative_base(metadata=metadata)
-target_metadata = Base.metadata
 
 DATABASE_URL = f"postgresql://{RDS_USERNAME}:{RDS_PASSWORD}@{RDS_HOSTNAME}:{RDS_PORT}/{RDS_DB_NAME}"
 
 engine = create_engine(url=DATABASE_URL, echo=True)
 
 session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base(metadata=metadata)
+target_metadata = Base.metadata
 
 
 def get_db():
