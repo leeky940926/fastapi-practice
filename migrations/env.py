@@ -3,9 +3,10 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
+from apps.albums.models.albums import *
 from apps.companies.models.companies import *
+from apps.configs.databases import target_metadata
 from apps.singers.models.singers import *
-from configs.databases import target_metadata
 
 config = context.config
 
