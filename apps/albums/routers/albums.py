@@ -6,7 +6,7 @@ from apps.configs.databases import get_db
 
 router = APIRouter(prefix="/albums")
 
-
+# commit test
 @router.get("")
 def get_album_list(db: Session = Depends(get_db)):
     albums = get_albums(db=db)
